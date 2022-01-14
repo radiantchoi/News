@@ -20,6 +20,6 @@ extension WebService {
             } else if let data = data {
                 print(data)
             }
-        }
+        }.resume()
     }
 }
