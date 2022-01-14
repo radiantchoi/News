@@ -14,6 +14,7 @@
 		4FCB289C2791CC38000B919A /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB289B2791CC38000B919A /* NewsListTableViewController.swift */; };
 		4FCB28A02791CCEC000B919A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCB289F2791CCEC000B919A /* Main.storyboard */; };
 		4FCB28A32791CFCF000B919A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB28A22791CFCF000B919A /* WebService.swift */; };
+		4FCB28A62791DA9B000B919A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB28A52791DA9B000B919A /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4FCB289B2791CC38000B919A /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
 		4FCB289F2791CCEC000B919A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4FCB28A22791CFCF000B919A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		4FCB28A52791DA9B000B919A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		4FCB28802791CAA8000B919A /* News */ = {
 			isa = PBXGroup;
 			children = (
+				4FCB28A42791DA8D000B919A /* Models */,
 				4FCB28A12791CFBE000B919A /* Services */,
 				4FCB289A2791CBFC000B919A /* Controllers */,
 				4FCB28812791CAA8000B919A /* AppDelegate.swift */,
@@ -84,6 +87,14 @@
 				4FCB28A22791CFCF000B919A /* WebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4FCB28A42791DA8D000B919A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4FCB28A52791DA9B000B919A /* Article.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				4FCB289C2791CC38000B919A /* NewsListTableViewController.swift in Sources */,
 				4FCB28A32791CFCF000B919A /* WebService.swift in Sources */,
 				4FCB28842791CAA8000B919A /* SceneDelegate.swift in Sources */,
+				4FCB28A62791DA9B000B919A /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
