@@ -13,13 +13,26 @@ class WebService {
 
 extension WebService {
     func getArticles(url: URL, completion: @escaping ([Any]?) -> ()) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print(error.localizedDescription)
-                completion(nil)
-            } else if let data = data {
-                print(data)
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+//            if let error = error {
+//                print(error.localizedDescription)
+//                completion(nil)
+//            } else if let data = data {
+//                print(data)
+//            }
+            
+            guard let data = data
+            else {
+                if let error = error {
+                    print(error.localizedDescription)
+                    completion(nil)
+                }
+                return
             }
-        }.resume()
+            
+            print(data)
+        }
+        
+        task.resume()
     }
 }
