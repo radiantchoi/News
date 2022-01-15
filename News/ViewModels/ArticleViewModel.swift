@@ -17,10 +17,10 @@ struct ArticleViewModel {
 
 extension ArticleViewModel {
     var title: String {
-        return article.title
+        article.title
     }
     
     var description: String {
-        return article.description
+        article.description
     }
 }

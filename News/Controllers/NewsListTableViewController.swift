@@ -47,7 +47,7 @@ extension NewsListTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticelTableViewCell",
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell",
                                                        for: indexPath) as? ArticleTableViewCell
         else { fatalError("Cell not found") }
         
