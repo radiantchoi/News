@@ -12,15 +12,8 @@ class WebService {
 }
 
 extension WebService {
-    func getArticles(url: URL, completion: @escaping ([Any]?) -> ()) {
+    func getArticles(url: URL, completion: @escaping ([Article]?) -> ()) {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//            if let error = error {
-//                print(error.localizedDescription)
-//                completion(nil)
-//            } else if let data = data {
-//                print(data)
-//            }
-            
             guard let data = data
             else {
                 if let error = error {
@@ -30,7 +23,11 @@ extension WebService {
                 return
             }
             
-            print(data)
+            guard let articleList = try? JSONDecoder().decode(ArticleList.self, from: data)
+            else { return }
+            
+            completion(articleList.articles)
+            print(articleList.articles)
         }
         
         task.resume()
